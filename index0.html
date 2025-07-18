@@ -190,7 +190,7 @@
       const email = this.querySelector('input[type="email"]').value.trim();
       const password = this.querySelector('input[type="password"]').value.trim();
 
-      fetch('http://localhost:3000/login', {
+      fetch('https://my-backend-1wis.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
