@@ -190,11 +190,11 @@
       const email = this.querySelector('input[type="email"]').value.trim();
       const password = this.querySelector('input[type="password"]').value.trim();
 
-      fetch('https://my-backend-1wis.onrender.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
-      })
+    fetch('https://my-backend-1wis.onrender.com/login', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ email, password })
+})
       .then(response => response.json())
       .then(data => {
         if (data.success) {
